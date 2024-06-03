@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title> introdução ao Canvas com Java Script </title>
+    <link rel="stylesheet" href="styles.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto sirin+Stencil" rel="stylesheet">
+    <meta charset="UTF-8">
+    <limk <link rel="icon" href="Imagens/Icon1/favicon.ico" type="image/x-icon"?v=2 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript"> 
+    function draw() {
+    var canvas=document.getElementById('meuCanvas');
+    if (canvas.getContext){
+        var cntxt= canvas.getContext('2d'); 
+        cntxt.beginPath();
+        cntxt.fillStyle = "rgb(255, 0, 0)";
+cntxt.moveTo(200, 100); cntxt.bezierCurveTo(120, 50, 120, 200, 200, 200);
+cntxt.moveTo(200, 180);
+cntxt.bezierCurveTo(280, 50, 200, 200, 280, 200); cntxt.fill();
+cntxt.stroke();
+cntxt.closePath(); cntxt.beginPath();
+cntxt.fillstyle= "rgb(0, 255, 0)"; 
+cntxt.moveTo(200, 100);
+cntxt.bezierCurveTo(190, 50, 250, 30, 280, 30);
+cntxt.fill();
+cntxt.stroke();
+cntxt.closePath();
+
+</script>
+
+</head>
+
+<body onload="draw();">
+
+<canvas id="meuCanvas" width="400" height="400" style="border:1px solid #000000; "></canvas> 
+</body>
+
+</html>
+
