@@ -1,50 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <title>Exemplo de arco 1</title>
-        <meta charset="UTF-8">
-        <!-- Incício do Script do Canvas -->        
-        <script>
-            function draw(){
-                var canvas = document.getElementById('meuCanvas');
-                if (canvas.getContext){
-                    var cntxt = canvas.getContext('2d');
-
-       
-
-        // Desenhe o retângulo verde
-        ctx.fillStyle = '#008000';
-        ctx.fillRect(0, 0, 800, 600);
-
-        // Desenhe o losango amarelo
-        ctx.fillStyle = '#FFD700';
-        ctx.beginPath();
-        ctx.moveTo(400, 0);
-        ctx.lineTo(800, 300);
-        ctx.lineTo(400, 600);
-        ctx.lineTo(0, 300);
-        ctx.closePath();
-        ctx.fill();
-
-        // Desenhe o círculo azul
-        ctx.fillStyle = '#0000FF';
-        ctx.beginPath();
-        ctx.arc(400, 300, 150, 0, 2 * Math.PI);
-        ctx.fill();
-
-        // Desenhe a faixa branca
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(0, 280, 800, 40);
-
-        
+  <head>
+    <title>Introdução ao Canvas com Java Script</title>
+    <meta charset="UTF-8">
+    <!-- Início do Java Script -->
+    <script>
+      function draw(){
+        var canvas = document.getElementById('meuCanvas');
+        if (canvas.getContext){
+          var cntxt = canvas.getContext('2d');
+           cntxt.fillStyle = "rgb(200, 120, 100)";
+           cntxt.fillRect (25, 30, 55, 50);
+           cntxt.strokeRect(25, 30, 55, 50);
+           cntxt.clearRect(25, 30, 45, 40);
+           cntxt.fillStyle = "rgba(25, 120, 200, 0.5)";
+           cntxt.fillRect (45, 40, 55, 50);
+           cntxt.strokeRect(65, 50, 55, 50);
         }
+      }
     </script>
-    <body onload="draw();">
-        <h1>Exemplo de arco 1</h1>
-        <div>
-            <canvas id="meuCanvas" width="800" height="600" style="border:1px solid #000000; background-color: white;"></canvas>
-        </div>
-    </body>
-</html>
-</body>
+    <!-- Fim do Java Script -->
+      
+      
+  </head>
+  <body onload="draw();">
+    <canvas id="meuCanvas" style="border:1px solid #000000;"></canvas>
+  </body>
 </html>
