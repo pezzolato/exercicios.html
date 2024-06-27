@@ -9,13 +9,18 @@
                 var canvas = document.getElementById('meuCanvas');
                 if (canvas.getContext){
                     var cntxt = canvas.getContext('2d');
+                    cntxt.beginPath();
+                    ctx.fillStyle = '#008000';
+        ctx.fillRect(0, 0, 800, 600);
 
-ctx.fillStyle ="rgba(0, 255, 0, 0.7)";
-ctx.fillRect(100, 0, 400, 300);
+                    cntxt.closePath();
 
+                   
+                   
 
-
-</script>        
+                }
+            }
+        </script>        
         <!-- Fim do Script do canvas-->        
     </head>
     <body onload="draw();">
