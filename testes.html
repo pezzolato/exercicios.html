@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bandeira do Brasil</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        canvas {
-            display: block;
-            background-color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <canvas id="brasil-flag"></canvas>
-    <script>
-        const canvas = document.getElementById('brasil-flag');
-        const ctx = canvas.getContext('2d');
+    <head>
+        <title>Exemplo de arco 1</title>
+        <meta charset="UTF-8">
+        <!-- Incício do Script do Canvas -->        
+        <script>
+            function draw(){
+                var canvas = document.getElementById('meuCanvas');
+                if (canvas.getContext){
+                    var cntxt = canvas.getContext('2d');
 
         // Defina as dimensões do canvas
         canvas.width = 800;
@@ -49,21 +38,15 @@
         ctx.fillStyle = '#FFFFFF';
         ctx.fillRect(0, 280, 800, 40);
 
-        // Desenhe as 27 estrelas
-        ctx.fillStyle = '#FFFFFF';
-        const starRadius = 5;
-        const starSpacing = 30;
-        const starOffsetX = 400;
-        const starOffsetY = 150;
-
-        for (let i = 0; i < 27; i++) {
-            const angle = (i * 2 * Math.PI) / 27;
-            const x = starOffsetX + starSpacing * Math.cos(angle);
-            const y = starOffsetY + starSpacing * Math.sin(angle);
-            ctx.beginPath();
-            ctx.arc(x, y, starRadius, 0, 2 * Math.PI);
-            ctx.fill();
+        
         }
     </script>
+    <body onload="draw();">
+        <h1>Exemplo de arco 1</h1>
+        <div>
+            <canvas id="meuCanvas" width="800" height="600" style="border:1px solid #000000; background-color: white;"></canvas>
+        </div>
+    </body>
+</html>
 </body>
 </html>
