@@ -10,8 +10,26 @@
         if (canvas.getContext){
           var cntxt = canvas.getContext('2d');
            cntxt.fillStyle = "rgb(0, 120, 0)";
-           cntxt.fillRect (100, 50, 600, 400);
-           cntxt.strokeRect(100, 50, 600, 400);
+           cntxt.fillRect (0, 0, 600, 400);
+           cntxt.strokeRect(0, 0, 600, 400);
+
+
+            // codigo do losango 
+    cntxt.fillStyle= "rgb(255, 255, 0)";;
+    cntxt.beginPath();
+    cntxt.moveTo(300, 50);
+    cntxt.lineTo(50, 200);
+    cntxt.lineTo(300, 350);
+    cntxt.lineTo(545, 200);
+    cntxt.fill();
+    // fim do codigo
+
+    // codigo do circulo azul 
+    cntxt.fillStyle="rgb(255, 255, 0)";
+    cntxt.beginPath();
+    cntxt.arc(300, 200, 100, 0, 2*3.14);
+    cntxt.fill();
+    // fim do codigo
            
            
         }
